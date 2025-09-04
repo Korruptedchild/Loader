@@ -1,5 +1,5 @@
 local Keys={
-{Key="Tractor",GameId=95712269457211,loader="https://your-url.com/TractorLoader.lua"}
+{Key="Tractor",GameId=95712269457211,loader="http://paid2.daki.cc:4016/BuildATractor.lua"}
 }
 
 if not your_key then error("No key provided!") end
