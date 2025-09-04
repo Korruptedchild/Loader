@@ -1,12 +1,19 @@
 local Keys={
-{Key="Tractor",GameId=95712269457211,loader="http://paid2.daki.cc:4016/BuildATractor.lua"}
+    {Key="Tractor", GameId=95712269457211, loader="http://paid2.daki.cc:4016/BuildATractor.lua"}
 }
 
 if not your_key then error("No key provided!") end
+
 local entry
-for _,v in ipairs(Keys) do if v.Key==your_key then entry=v break end end
+for _,v in ipairs(Keys) do
+    if v.Key == your_key then entry = v break end
+end
+
 if not entry then error("Invalid key!") end
-if entry.GameId ~= game.PlaceId then error("Game not supported!") end
+
+if tostring(entry.GameId) ~= tostring(game.PlaceId) then
+    error("Game not supported!")
+end
 
 local spinner={"|","/","-","\\"}
 local colors={BrickColor.new("Bright red"),BrickColor.new("Bright yellow"),BrickColor.new("Bright green"),BrickColor.new("Bright blue")}
